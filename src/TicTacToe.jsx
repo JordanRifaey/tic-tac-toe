@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Confetti from 'react-confetti'
+import PropTypes from "prop-types";
+
+// add prop types
+// add default props
+
 
 
 function Square({ value, index,  winningLine, onSquareClick }) {
+    Component.PropTypes = {
+        value: PropTypes.string,
+        index: PropTypes.number,
+        winningLine: PropTypes.array,
+        onSquareClick: PropTypes.func,
+    }
     const isWinningSquare = winningLine && winningLine.includes(index)
     return (
         <button className={`square ${value && ' has-value'} ${isWinningSquare && ' winning-square'}`} onClick={() => {
@@ -43,6 +54,17 @@ function checkWinner(squares) {
 }
 
 export default function Board() {
+    Component.PropTypes = {
+        squares: PropTypes.array,
+        setSquares: PropTypes.func,
+        winningLine: PropTypes.array,
+        setWinningLine: PropTypes.func,
+        isXTurn: PropTypes.bool,
+        setIsXTurn: PropTypes.func,
+        onSquareClick: PropTypes.func,
+        resetGame: PropTypes.func,
+        message: PropTypes.string,
+    }
     const [squares, setSquares] = React.useState(Array(9).fill(null))
     console.clear()
     console.info(squares)
