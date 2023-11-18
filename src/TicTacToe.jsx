@@ -91,7 +91,7 @@ export default function Board() {
         setIsXTurn(true) // X always starts first
     }
 
-    const message = winner ? `Winner: ${winner.winner}` : `Your Turn: ${isXTurn ? 'Player 1' : 'Player 2'}`
+    const message = winner ? `Winner: ${winner.winner === 'X' ? 'Player 1' : 'Player 2'}` : `Your Turn: ${isXTurn ? 'Player 1' : 'Player 2'}`
     return (
         <div className="board-container">
             <div className="board">
