@@ -44,7 +44,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  /*transition: border-color 0.25s;*/
 }
 button:hover {
   border-color: #646cff;
@@ -65,4 +65,58 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+
+
+#root {
+  width: 100%;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px 10px 10px;
+  outline: none;
+}
+
+.winning-square {
+  background-color: #646cff;
+}
+
+.square.has-value:hover, .square.has-value:focus, .square.has-value:focus-visible {
+  outline: none;
+  border: none;
+  cursor: default;
+}
+
+.message {
+  text-align: center;
+}
+
+.btn-reset-game {
+  margin-top: 20px;
+    margin-left: 115px;
+}
+
+.square-text {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 10px;
+  text-align: center;
 }
